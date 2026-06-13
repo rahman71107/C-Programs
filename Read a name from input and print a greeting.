@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    
+    //Using Scanf() Function//
+    char name[20];
+    printf("Enter your Name: \n");
+    scanf("%s",&name);
+    printf("Hi %s Welcome to C Programs\n",name);
+    //Scanf leaves the string after white space//
+    
+    //To Overcome this use fgets()//
+    while(getchar()!='\n');
+    char fullname[20];
+    printf("Enter your Full Name: \n");
+    fgets(fullname,sizeof(fullname),stdin);
+    fullname[strcspn(fullname,"\n")]='\0';
+    printf("Hi %s Welcome to C Programs\n",fullname);
+
+    return 0;
+}
