@@ -1,0 +1,36 @@
+#define _USE_MATH_DEFINES
+#include <stdio.h>
+#include<math.h>
+float Circle(float r){
+    return M_PI*pow(r,2);
+}
+float Rect(float w,float l){
+    return w*l;
+}
+float Triangle(float b,float h){
+    return 0.5*b*h;
+}
+typedef float circle,rect,triangle;
+int main() {
+    float c_area,r_area,t_area;
+    circle radius;
+    rect width,length;
+    triangle base,height;
+    printf("Enter the Radius of the Circle: ");
+    scanf("%f",&radius);
+    c_area=Circle(radius);
+    printf("The Area of Circle is: %.2f\n",c_area);
+    printf("Enter the Width of the Rectangle: ");
+    scanf("%f",&width);
+    printf("Enter the Length of the Rectangle: ");
+    scanf("%f",&length);
+    r_area=Rect(width,length);
+    printf("The Area of Rectangle is: %.2f\n",r_area);
+    printf("Enter the Base of the Triangle: ");
+    scanf("%f",&base);
+    printf("Enter the Height of the Triangle: ");
+    scanf("%f",&height);
+    t_area=Triangle(base,height);
+    printf("The Area of Triangle is: %.2f\n",t_area);
+    return 0;
+}
