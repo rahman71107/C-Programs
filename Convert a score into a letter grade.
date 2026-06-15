@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    int score;
+    printf("Enter your Score: ");
+    scanf("%d",&score);
+    switch(score){
+        case 90 ... 100:
+              printf("Your grade is O");
+              break;
+        case 80 ... 89:
+              printf("Your grade is A");
+              break;
+        case 70 ... 79:
+              printf("Your grade is B");
+              break;
+        case 60 ... 69:
+              printf("Your grade is C");
+              break;
+        case 50 ... 59:
+              printf("Your grade is D");
+              break;
+        default:
+              printf("Sorry you have failed, Better luck next time.");
+    }
+    
+    return 0;
+}
