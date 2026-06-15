@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int totalnumbers;
+    int currentscore=0;
+    int totalsum=0;
+    printf("Enter total number of numbers you have: ");
+    scanf("%d",&totalnumbers);
+    for(int i=1;i<=totalnumbers;i++){
+        printf("Enter your %d number: ",i);
+        scanf("%d",&currentscore);
+        totalsum=totalsum+currentscore;
+    }
+    printf("The Sum is: %d",totalsum);
+     return 0;
+}
