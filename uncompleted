@@ -1,0 +1,99 @@
+#include <stdio.h>
+
+int main() {
+    int gro;
+    int choice;
+    int pack;
+    float kg;
+    float g;
+    float totalsum[choice];
+    printf("\t\t\t\t\t\tThe Grocery Store\n");
+    printf("Groceries Availble\n\t1. Milk Pack of 1L\n\t2. Carrot\n\t3. Onion\n\t4. Nuts\n\t5. Oil Pack of 1L\n");
+    printf("Enter 0 as your choice to know the total after you have enter the lists\n");
+    printf("Enter the no of Groceries you have: ");
+    scanf("%d",&gro);
+    printf("*******************************************\n");
+    for(int i=0;i<gro;i++){
+        printf("Enter the Grocery number you have one by one using menu: ");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+                float milk_Price=3.0;
+                float milk_total;
+                printf("*******************************************\n");
+                printf("Item Name: Milk Pack of 1L\n");
+                printf("Enter No of Packets: ");
+                scanf("%d",&pack);
+                printf("Unit Price: $%.2f\n",milk_Price);
+                milk_total=pack*milk_Price;
+                printf("Total: $%.2f\n",milk_total);
+                totalsum[0]=milk_total;
+                printf("*******************************************\n\n");
+                break;
+            case 2:    
+                float carrot_Pricekg=1.3;
+                float carrot_total;
+                printf("*******************************************\n");
+                printf("Item Name: Carrot\n");
+                printf("Enter Quantity in kg: ");
+                scanf("%.2f",&kg);
+                printf("Unit Price: $%.2f\n",carrot_Pricekg);
+                g=carrot_Pricekg/1000;
+                carrot_total=kg*1000*g;
+                printf("Total: $%.2f\n",carrot_total);
+                totalsum[1]=carrot_total;
+                printf("*******************************************\n\n");
+                break;
+             case 3:    
+                float onion_Pricekg=1.5;
+                float onion_total;
+                printf("*******************************************\n");
+                printf("Item Name: Onion\n");
+                printf("Enter Quantity in kg: ");
+                scanf("%.2f",&kg);
+                printf("Unit Price: $%.2f\n",onion_Pricekg);
+                g=onion_Pricekg/1000;
+                onion_total=kg*1000*g;
+                printf("Total: $%.2f\n",onion_total);
+                totalsum[2]=onion_total;
+                printf("*******************************************\n\n");
+                break;
+             case 4:    
+                float nuts_Pricekg=2.7;
+                float nuts_total;
+                printf("*******************************************\n");
+                printf("Item Name: Nuts\n");
+                printf("Enter Quantity in kg: ");
+                scanf("%.2f",&kg);
+                printf("Unit Price: $%.2f\n",nuts_Pricekg);
+                g=nuts_Pricekg/1000;
+                nuts_total=kg*1000*g;
+                printf("Total: $%.2f\n",nuts_total);
+                totalsum[3]=nuts_total;
+                printf("*******************************************\n\n");
+                break;
+            case 5:
+                float oil_Price=1.9;
+                float oil_total;
+                printf("*******************************************\n");
+                printf("Item Name: Oil Pack of 1L\n");
+                printf("Enter No of Packets: ");
+                scanf("%d",&pack);
+                printf("Unit Price: $%.2f\n",oil_Price);
+                oil_total=pack*oil_Price;
+                printf("Total: $%.2f\n",milk_total);
+                totalsum[4]=oil_total;
+                printf("*******************************************\n\n");
+                break;
+            default:
+            float totalamt;
+                for(int i=0;i<gro;i++){
+                    totalamt=totalamt+totalsum[i];
+                }
+            printf("Total Amount: %.2f",totalamt);
+        }
+    }
+    printf("\t\t\t\t\t\tThank you");
+   
+    return 0;
+}
