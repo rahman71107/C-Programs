@@ -1,0 +1,12 @@
+#include <stdio.h>
+typedef double cash;
+int main() {
+    cash dollar;
+    cash indian=108;
+    cash converted_cash;
+    printf("Enter the amount of dollar you have:");
+    scanf("%lf",&dollar);
+    converted_cash=dollar*indian;
+    printf("The exchanged amount in indian currency for your dollars: %lf rs",converted_cash);
+    return 0;
+}
